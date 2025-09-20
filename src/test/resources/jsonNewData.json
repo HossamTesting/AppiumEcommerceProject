@@ -1,0 +1,64 @@
+{
+
+
+  "_Allproducts": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
+    "Nike Blazer Mid '77", "Converse All Star", "Air Jordan 9 Retro",
+    "Jordan 6 Rings", "Jordan Lift Off", "LeBron Soldier 12", "PG 3",
+    "Nike SFB Jungle"]
+,
+  "TC1_userCanLoginByFillingForm": {
+    "_description": "Ensures that a user can enters product page after filling the form data and clicking shop button.",
+    "country": "Egypt",
+    "name": "First Testing Customer",
+    "gender": "Male"
+  },
+  "TC2_userCanNavigateToCartPageAfterAddingProducts": {
+    "_description": "Ensure that a user can select a product or more and click on the cart button to navigate to the cart page.",
+    "country": "Argentina",
+    "name": "Second Testing Customer",
+    "gender": "Female",
+    "products": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
+      "Nike Blazer Mid '77", "Converse All Star"]
+  },
+  "TC3_userFindSelectedProductsAtCart": {
+    "_description": "Ensure that a user can select a product or more and click on the cart button to navigate to the cart page.",
+    "country": "Algeria",
+    "name": "Third Testing Customer",
+    "gender": "Female",
+    "products": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
+      "Nike Blazer Mid '77", "Converse All Star", "Air Jordan 9 Retro",
+      "Jordan 6 Rings", "Jordan Lift Off", "LeBron Soldier 12", "PG 3",
+      "Nike SFB Jungle"]
+  },
+  "TC4_totalProductsAmountIsShownCorrectly": {
+    "_description": "Ensure that a user can select a product or more and click on the cart button to navigate to the cart page.",
+    "country": "Albania",
+    "name": "Fourth Testing Customer",
+    "gender": "Male",
+    "products": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
+      "Nike Blazer Mid '77", "Converse All Star", "Air Jordan 9 Retro",
+      "Jordan 6 Rings", "Jordan Lift Off", "LeBron Soldier 12", "PG 3"]
+  },
+  "TC5_cartButtonsWorkingCorrectly": {
+    "_description": "Ensure that a user can select a product or more and click on the cart button to navigate to the cart page.",
+    "country": "Argentina",
+    "name": "Fifth Testing Customer",
+    "gender": "MALE",
+    "products": ["Air Jordan 1 Mid SE"]
+  },
+  "TC6_userCanLoggingWhenNavigateToWebsite": {
+    "_description": "Ensure that a user can login to website after clicking on visit website.",
+    "country": "Belgium",
+    "name": "Sixth Testing Customer",
+    "gender": "FEMALE",
+    "products": ["Air Jordan 1 Mid SE"],
+    "username": "tomsmith",
+    "password":"SuperSecretPassword!"
+  },
+  "TC8_userCannotNavigateToCartPageWithoutAddingProducts": {
+    "_description": "Ensure that a user cannot navigate to cart page without adding products to cart.",
+    "country": "Angola",
+    "name": "Seventh Testing Customer",
+    "gender": "MALE"
+  }
+}

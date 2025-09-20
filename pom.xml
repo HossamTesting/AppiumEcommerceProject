@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Project Object Model file for the Automation Framework -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Basic project information -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>Automation_Framework_Testing</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Project properties and version management -->
+    <properties>
+        <!-- Java version used to compile the project -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+
+        <!-- Encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Dependencies and plugins versions -->
+        <selenium>4.27.0</selenium>
+        <testng>7.10.2</testng>
+        <log4jVersion>2.24.3</log4jVersion>
+        <allure>2.29.1</allure>
+        <Gson>2.11.0</Gson>
+        <Commons>2.16.1</Commons>
+        <Maven.Surefire>3.5.3</Maven.Surefire>
+        <Maven.Compiler>3.11.0</Maven.Compiler>
+        <Maven.Clean>3.4.1</Maven.Clean>
+        <Maven.Allure>2.13.0</Maven.Allure>
+        <appiumjava>9.4.0</appiumjava>
+
+
+        <!-- Default TestNG suite file to run -->
+        <suiteXmlFile>regression.xml</suiteXmlFile>
+    </properties>
+
+    <!-- Build-related configurations -->
+    <build>
+        <plugins>
+
+            <!-- Runs TestNG test suite using Maven Surefire -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${Maven.Surefire}</version>
+                <configuration>
+                    <!-- Continue build even if tests fail -->
+                    <testFailureIgnore>true</testFailureIgnore>
+
+                    <!-- Load TestNG suite from specified file -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <!-- Compiles Java source code -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${Maven.Compiler}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Generates Allure report after tests -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${Maven.Allure}</version>
+                <configuration>
+
+                    <!-- Directory for Allure result files -->
+                    <resultsDirectory>${basedir}/allure-results</resultsDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>Allure_Report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>serve</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Cleans up generated files/directories -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${Maven.Clean}</version>
+                <configuration>
+                    <filesets>
+                        <!-- Clean Allure results -->
+                        <fileset>
+                            <directory>allure-results</directory>
+                        </fileset>
+                        <!-- Clean screenshots (but keep folder) -->
+                        <fileset>
+                            <directory>screenshots</directory>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </fileset>
+                        <!-- Clean log files (but keep folder)-->
+                        <fileset>
+                            <directory>logs</directory>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <!-- All required dependencies for the framework -->
+    <dependencies>
+
+        <!-- Selenium WebDriver for browser automation -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium}</version>
+        </dependency>
+
+        <!-- TestNG for test execution and organization -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng}</version>
+            <scope>test</scope>
+
+            <!-- Remove SLF4J from TestNG to avoid conflict with LOG4J -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Allure integration with TestNG -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure}</version>
+        </dependency>
+
+        <!-- Google Gson for JSON parsing -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${Gson}</version>
+        </dependency>
+
+        <!-- Apache Commons IO for file utilities -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${Commons}</version>
+        </dependency>
+
+        <!-- Log4j core logging API -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4jVersion}</version>
+        </dependency>
+
+        <!-- Log4j implementation -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4jVersion}</version>
+        </dependency>
+
+        <!-- SLF4J binding for Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4jVersion}</version>
+        </dependency>
+
+        <!-- Java Utility Logging  binding for Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
+            <version>${log4jVersion}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appiumjava}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

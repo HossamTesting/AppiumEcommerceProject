@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Parallel Suite" parallel="methods" thread-count="2">
+
+    <listeners>
+        <listener class-name="utility.AnnotationTransformer"/>
+        <listener class-name="utility.AllureLog4jListener"/>
+    </listeners>
+
+    <test name="All Scenarios">
+
+        <classes>
+            <class name="tests.PositiveTestCases"/>
+            <class name="tests.NegativeTestCases"/>
+        </classes>
+    </test>
+
+</suite>
