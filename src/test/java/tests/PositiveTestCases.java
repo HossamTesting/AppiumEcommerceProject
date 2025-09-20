@@ -216,7 +216,41 @@ public class PositiveTestCases extends BaseTest {
     }
 
 
+    @Description("This testcase aim is to click on the web button and navigate to the web app preforming logging")
+    @Feature("PositiveScenarios")
+    @Severity(SeverityLevel.CRITICAL)
+    @Test(priority = 6)
+    public void TC6_22userCanLoggingWhenNavigateToWebsite() throws Exception {
+        ThreadContext.put("TestName", methodName.get());
+        log.info("************ Starting method: '{}' ************", methodName.get());
 
+        homePage.set(new HomePage(uiActions.get()));
+        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("country").toString());
+        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("name").toString());
+        String gender = jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("gender").toString().toLowerCase();
+        homePage.get().selectGender(HomePage.Gender.valueOf(gender));
+        homePage.get().clickShopBtn();
+        homePage.get().assertProductPageOpened();
+        productPage.set(new ProductPage(uiActions.get()));
+        List<?> products = (List<?>) jsonFileManager.get()
+                .getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite")
+                .get("products");
+        String[] productsArray = products.stream()
+                .map(String::valueOf)
+                .toArray(String[]::new);
+        productPage.get().addItemToCart(productsArray);
+        productPage.get().clickOnCartBtn();
+        productPage.get().assertCartPageOpened();
+        cartPage.set(new CartPage(uiActions.get()));
+        cartPage.get().clickOnVisitWebsiteBtn();
+        cartPage.get().assertWebPageOpenedSuccessfully();
+        webPage.set(new WebPage(uiActions.get()));
+        webPage.get().switchToWeb();
+        webPage.get().loginHerokuApp("tomsmith", "SuperSecretPassword!");
+        webPage.get().assertLoggedSuccessfully();
+
+
+    }
 
 }
 
