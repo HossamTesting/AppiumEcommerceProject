@@ -215,12 +215,11 @@ public class PositiveTestCases extends BaseTest {
 
     }
 
-
     @Description("This testcase aim is to click on the web button and navigate to the web app preforming logging")
     @Feature("PositiveScenarios")
     @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 6)
-    public void TC6_22userCanLoggingWhenNavigateToWebsite() throws Exception {
+    public void test123 () throws Exception {
         ThreadContext.put("TestName", methodName.get());
         log.info("************ Starting method: '{}' ************", methodName.get());
 
@@ -251,6 +250,7 @@ public class PositiveTestCases extends BaseTest {
 
 
     }
+
 
 }
 
