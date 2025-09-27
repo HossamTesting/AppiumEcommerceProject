@@ -7,7 +7,6 @@ import io.qameta.allure.SeverityLevel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.CartPage;
@@ -18,8 +17,6 @@ import utility.AllureLog4jListener;
 import utility.AnnotationTransformer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 import static java.lang.invoke.MethodHandles.lookup;
@@ -42,9 +39,9 @@ public class PositiveTestCases extends BaseTest {
 
         homePage.set(new HomePage(uiActions.get()));
         homePage.get().getTitle();
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC1_userCanLoginByFillingForm").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         homePage.get().assertProductPageOpened();
@@ -60,13 +57,13 @@ public class PositiveTestCases extends BaseTest {
         log.info("************ Starting method: '{}' ************", methodName.get());
 
         homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         productPage.set(new ProductPage(uiActions.get()));
-        List<?> products = (List<?>) jsonFileManager.get()
+        List<?> products = (List<?>) jsonFileManager
                 .getKeyAndValueByKey("TC2_userCanNavigateToCartPageAfterAddingProducts")
                 .get("products");
         String[] stringArray = products.stream()
@@ -87,13 +84,13 @@ public class PositiveTestCases extends BaseTest {
         log.info("************ Starting method: '{}' ************", methodName.get());
 
         homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         productPage.set(new ProductPage(uiActions.get()));
-        List<?> products = (List<?>) jsonFileManager.get()
+        List<?> products = (List<?>) jsonFileManager
                 .getKeyAndValueByKey("TC3_userFindSelectedProductsAtCart")
                 .get("products");
         String[] productsArray = products.stream()
@@ -120,14 +117,14 @@ public class PositiveTestCases extends BaseTest {
         log.info("************ Starting method: '{}' ************", methodName.get());
 
         homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         homePage.get().assertProductPageOpened();
         productPage.set(new ProductPage(uiActions.get()));
-        List<?> products = (List<?>) jsonFileManager.get()
+        List<?> products = (List<?>) jsonFileManager
                 .getKeyAndValueByKey("TC4_totalProductsAmountIsShownCorrectly")
                 .get("products");
         String[] productsArray = products.stream()
@@ -153,14 +150,14 @@ public class PositiveTestCases extends BaseTest {
         log.info("************ Starting method: '{}' ************", methodName.get());
 
         homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         homePage.get().assertProductPageOpened();
         productPage.set(new ProductPage(uiActions.get()));
-        List<?> products = (List<?>) jsonFileManager.get()
+        List<?> products = (List<?>) jsonFileManager
                 .getKeyAndValueByKey("TC5_cartButtonsWorkingCorrectly")
                 .get("products");
         String[] productsArray = products.stream()
@@ -188,14 +185,14 @@ public class PositiveTestCases extends BaseTest {
         log.info("************ Starting method: '{}' ************", methodName.get());
 
         homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("gender").toString().toLowerCase();
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("gender").toString().toLowerCase();
         homePage.get().selectGender(HomePage.Gender.valueOf(gender));
         homePage.get().clickShopBtn();
         homePage.get().assertProductPageOpened();
         productPage.set(new ProductPage(uiActions.get()));
-        List<?> products = (List<?>) jsonFileManager.get()
+        List<?> products = (List<?>) jsonFileManager
                 .getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite")
                 .get("products");
         String[] productsArray = products.stream()
@@ -209,22 +206,12 @@ public class PositiveTestCases extends BaseTest {
         cartPage.get().assertWebPageOpenedSuccessfully();
         webPage.set(new WebPage(uiActions.get()));
         webPage.get().switchToWeb();
-        webPage.get().loginHerokuApp("tomsmith", "SuperSecretPassword!");
+        webPage.get().loginHerokuApp(jsonFileManager.getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("username").toString(),
+                jsonFileManager.getKeyAndValueByKey("TC6_userCanLoggingWhenNavigateToWebsite").get("password").toString());
         webPage.get().assertLoggedSuccessfully();
 
 
     }
-
-    @Description("This testcase aim is to click on the web button and navigate to the web app preforming logging")
-    @Feature("PositiveScenarios")
-    @Severity(SeverityLevel.CRITICAL)
-    @Test(priority = 6)
-    public void test123 () throws Exception {
-
-
-
-    }
-
 
 }
 

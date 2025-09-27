@@ -57,6 +57,7 @@ public class GetWebDriver {
         launchBrowser(browserName, modes);
     }
 
+
     /**
      * Returns a singleton instance of the GetWebDriver class.
      * <br>Initializes and launches the browser only once per test run (if not already launched).

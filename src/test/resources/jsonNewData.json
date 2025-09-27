@@ -1,7 +1,26 @@
 {
+  "devices": [
+    {
+      "deviceName": "HossamDevice9ProXL",
+      "uuid": "emulator-5556",
+      "serverPort": 4723,
+      "systemPort": 8223
+    },
+    {
+      "deviceName": "HossamDevice9AProFold",
+      "uuid": "emulator-5554",
+      "serverPort": 4724,
+      "systemPort": 8224
+    },
+    {
+      "deviceName": "HossamDeviceTabletPixel",
+      "uuid": "emulator-5558",
+      "serverPort": 4725,
+      "systemPort": 8225
+    }
+  ],
 
-
-  "_Allproducts": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
+  "_AllProducts": ["Air Jordan 4 Retro", "Air Jordan 1 Mid SE",
     "Nike Blazer Mid '77", "Converse All Star", "Air Jordan 9 Retro",
     "Jordan 6 Rings", "Jordan Lift Off", "LeBron Soldier 12", "PG 3",
     "Nike SFB Jungle"]
@@ -55,7 +74,7 @@
     "username": "tomsmith",
     "password":"SuperSecretPassword!"
   },
-  "TC8_userCannotNavigateToCartPageWithoutAddingProducts": {
+  "TC7_userCannotNavigateToCartPageWithoutAddingProducts": {
     "_description": "Ensure that a user cannot navigate to cart page without adding products to cart.",
     "country": "Angola",
     "name": "Seventh Testing Customer",

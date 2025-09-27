@@ -72,7 +72,7 @@ public class ConfigLoader {
      * @return the value associated with the key, or null if not found and flag is false or omitted.
      * @throws IllegalArgumentException if the key is not found and flag is explicitly true.
      */
-    public String getValue(String key, boolean... flag) {
+    public String getValue(String key, boolean... flag) throws Exception {
         boolean flagValue = flag.length > 0 && flag[0];  // Only true if flag is explicitly true
         String value = properties.getProperty(key);
 

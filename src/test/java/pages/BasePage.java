@@ -2,10 +2,8 @@ package pages;
 
 import actions.UIActions;
 import mobile.android.AndroidActions;
-import mobileDriverFactory.GetMobileDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
@@ -14,10 +12,10 @@ import static java.lang.invoke.MethodHandles.lookup;
 public class BasePage {
 
     private static final Logger log = LogManager.getLogger(lookup().lookupClass());
-    protected final UIActions uiActions ;
-    protected final AndroidActions androidActions ;
+    protected final UIActions uiActions;
+    protected final AndroidActions androidActions;
 
-    public BasePage (UIActions uiActions) {
+    public BasePage(UIActions uiActions) {
         this.uiActions = uiActions;
         this.androidActions = new AndroidActions(uiActions);
     }
@@ -26,7 +24,7 @@ public class BasePage {
         System.out.println(androidActions);
     }
 
-    public void switchToWeb(){
+    public void switchToWeb() {
         List<String> contextList = androidActions.getContextHandles();
         String webContext = contextList.stream()
                 .filter(context -> context.toLowerCase().contains("web"))

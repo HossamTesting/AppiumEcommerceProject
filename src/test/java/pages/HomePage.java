@@ -17,7 +17,6 @@ public class HomePage extends BasePage {
         super(uiActions);
         log.info("Initializing HomePage object.");
 
-
     }
 
     //***************************************************Functions***************************************************//
@@ -37,7 +36,7 @@ public class HomePage extends BasePage {
 
     public void clickShopBtn() throws InterruptedException {
         uiActions.click(UIActions.LocatorType.id, "com.androidsample.generalstore:id/btnLetsShop", UIActions.ExplicitWaitCondition.elementToBeClickable);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     public void selectCountry(String Nationality) {
@@ -58,7 +57,7 @@ public class HomePage extends BasePage {
         try {
             String pageName = uiActions.getElementAttribute(UIActions.LocatorType.id, "com.androidsample.generalstore:id/toolbar_title", UIActions.ExplicitWaitCondition.presenceOfElement, "text");
             Assert.assertTrue(pageName.toLowerCase().contains("products"));
-            log.info("\nAssertion Passed, Product page is shown as expected.");
+            log.info("\nAssertion Passed, Product page is shown as expected.\n");
         } catch (Exception e) {
             log.error("Assertion Failed, Product page isn't shown as expected");
             throw e;
@@ -69,7 +68,7 @@ public class HomePage extends BasePage {
 
         try {
            uiActions.getElementAttribute(UIActions.LocatorType.xPath, "//android.widget.Toast[@text='Please enter your name']", UIActions.ExplicitWaitCondition.presenceOfElement,"text");
-            log.info("\nAssertion Passed, Error message is 'Please enter your name' shown as expected\n.");
+            log.info("\nAssertion Passed, Error message is 'Please enter your name' shown as expected.\n");
         } catch (Exception e) {
             log.error("Assertion Failed, Error message isn't shown as expected.");
             Assert.fail("Assertion Failed, Error message isn't shown.");

@@ -3,7 +3,6 @@ package pages;
 import actions.BrowserActions;
 import actions.UIActions;
 import mobile.android.AndroidActions;
-import mobileDriverFactory.GetMobileDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
@@ -11,7 +10,6 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static java.lang.invoke.MethodHandles.lookup;
 
@@ -33,7 +31,7 @@ public class CartPage extends BasePage {
 
     public void clickOnVisitWebsiteBtn() throws InterruptedException {
         uiActions.click(UIActions.LocatorType.id, "com.androidsample.generalstore:id/btnProceed", UIActions.ExplicitWaitCondition.elementToBeClickable);
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
     public void clickOnTermsBtn() {
@@ -112,7 +110,7 @@ public class CartPage extends BasePage {
         String checked = uiActions.getElementAttribute(UIActions.LocatorType.className, "android.widget.CheckBox", UIActions.ExplicitWaitCondition.visibilityOfElement, "checked");
         System.out.println(checked);
         if (checked.equals("true")) {
-            log.info("Assertion Passed, 'Send Mails' checkbox is checked as expected.");
+            log.info("\nAssertion Passed, 'Send Mails' checkbox is checked as expected.\n");
         } else {
             log.error("Assertion Failed, 'Send Mails' checkbox isn't checked as expected.");
             Assert.fail("Assertion Failed, 'Send Mails' checkbox isn't checked.");
@@ -122,16 +120,16 @@ public class CartPage extends BasePage {
     public void assertTermsMessageShown() {
         String terms = uiActions.getElementAttribute(UIActions.LocatorType.id, "com.androidsample.generalstore:id/alertTitle", UIActions.ExplicitWaitCondition.visibilityOfElement, "text");
         if (terms.equals("Terms Of Conditions")) {
-            log.info("Assertion Passed, 'Terms of Condition' message is shown as expected.");
+            log.info("\nAssertion Passed, 'Terms of Condition' message is shown as expected.\n");
         } else {
             log.error("Assertion Failed, 'Terms of Condition' message isn't shown as expected.");
             Assert.fail("Assertion Failed, 'Terms of Condition' message isn't shown.");
         }
     }
 
-    public void assertWebPageOpenedSuccessfully(){
+    public void assertWebPageOpenedSuccessfully() {
         switchToWeb();
-        Assert.assertEquals(BrowserActions.getWindowTitle(),"Google");
+        Assert.assertEquals(BrowserActions.getWindowTitle(), "Google");
         log.info("\nAssertion Passed, WebPage 'Google' opened successfully.\n");
     }
 

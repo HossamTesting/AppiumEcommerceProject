@@ -1,0 +1,284 @@
+INFO [main] [startAppiumServices] [startAppiumServices] 2025-09-27 11:10:09 - BaseTest:51 -
+ ************ Starting method: startAppiumServices ************
+INFO [main] [startAppiumServices] [loadProperties] 2025-09-27 11:10:09 - ConfigLoader:59 -
+ Properties loaded successfully from: 'src/test/resources/Config.properties'
+INFO [main] [startAppiumServices] [<init>] 2025-09-27 11:10:09 - JsonFileManager:55 -
+ JSON data loaded successfully from: 'src/test/resources/jsonNewData.json'
+INFO [main] [startAppiumServices] [getListOfMapsByKey] 2025-09-27 11:10:09 - JsonFileManager:422 -
+ List of maps retrieved for key 'devices': [{deviceName=HossamDevice9ProXL, uuid=emulator-5556, serverPort=4723.0, systemPort=8223.0}, {deviceName=HossamDevice9AProFold, uuid=emulator-5554, serverPort=4724.0, systemPort=8224.0}, {deviceName=HossamDeviceTabletPixel, uuid=emulator-5558, serverPort=4725.0, systemPort=8225.0}]
+INFO [main] [startAppiumServices] [initialize] 2025-09-27 11:10:09 - DevicesManager:65 -
+ Devices pool initialized with '3' devices '[{deviceName=HossamDevice9ProXL, uuid=emulator-5556, serverPort=4723.0, systemPort=8223.0}, {deviceName=HossamDevice9AProFold, uuid=emulator-5554, serverPort=4724.0, systemPort=8224.0}, {deviceName=HossamDeviceTabletPixel, uuid=emulator-5558, serverPort=4725.0, systemPort=8225.0}]'.
+INFO [main] [startAppiumServices] [printAvailableDevices] 2025-09-27 11:10:09 - DevicesManager:103 -
+ Available devices: [{deviceName=HossamDevice9ProXL, uuid=emulator-5556, serverPort=4723.0, systemPort=8223.0}, {deviceName=HossamDevice9AProFold, uuid=emulator-5554, serverPort=4724.0, systemPort=8224.0}, {deviceName=HossamDeviceTabletPixel, uuid=emulator-5558, serverPort=4725.0, systemPort=8225.0}]
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:09 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerPath': C://Users//hossam_atef//AppData//Roaming//npm//node_modules//appium//build//lib//main.js
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:09 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [main] [startAppiumServices] [startAllServices] 2025-09-27 11:10:27 - DevicesManager:122 -
+ Starting an Appium server at 'http://127.0.0.1:4723/' for device 'HossamDevice9ProXL'.
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:27 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerPath': C://Users//hossam_atef//AppData//Roaming//npm//node_modules//appium//build//lib//main.js
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:27 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [main] [startAppiumServices] [startAllServices] 2025-09-27 11:10:40 - DevicesManager:122 -
+ Starting an Appium server at 'http://127.0.0.1:4724/' for device 'HossamDevice9AProFold'.
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:40 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerPath': C://Users//hossam_atef//AppData//Roaming//npm//node_modules//appium//build//lib//main.js
+INFO [main] [startAppiumServices] [getValue] 2025-09-27 11:10:40 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [main] [startAppiumServices] [startAllServices] 2025-09-27 11:10:53 - DevicesManager:122 -
+ Starting an Appium server at 'http://127.0.0.1:4725/' for device 'HossamDeviceTabletPixel'.
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [setup] 2025-09-27 11:10:53 - BaseTest:72 -
+ ************ Starting method: setup ************
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [setup] 2025-09-27 11:10:53 - BaseTest:72 -
+ ************ Starting method: setup ************
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [setup] 2025-09-27 11:10:53 - BaseTest:72 -
+ ************ Starting method: setup ************
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [acquireDevice] 2025-09-27 11:10:53 - DevicesManager:84 -
+ Acquired device: {deviceName=HossamDevice9ProXL, uuid=emulator-5556, serverPort=4723.0, systemPort=8223.0}
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [acquireDevice] 2025-09-27 11:10:53 - DevicesManager:84 -
+ Acquired device: {deviceName=HossamDevice9AProFold, uuid=emulator-5554, serverPort=4724.0, systemPort=8224.0}
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'platform': android
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [acquireDevice] 2025-09-27 11:10:53 - DevicesManager:84 -
+ Acquired device: {deviceName=HossamDeviceTabletPixel, uuid=emulator-5558, serverPort=4725.0, systemPort=8225.0}
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'platform': android
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appLocation': src/test/resources/application/General-Store.apk
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appLocation': src/test/resources/application/General-Store.apk
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appiumServerIPAddress': 127.0.0.1
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'chromeExePath': src/test/resources/DriversExe/chromedriver-win64-133/chromedriver.exe
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'chromeExePath': src/test/resources/DriversExe/chromedriver-win64-133/chromedriver.exe
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'platform': android
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'appLocation': src/test/resources/application/General-Store.apk
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [getValue] 2025-09-27 11:10:53 - ConfigLoader:80 -
+ Property value retrieved for key 'chromeExePath': src/test/resources/DriversExe/chromedriver-win64-133/chromedriver.exe
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [setupAndroidOptions] 2025-09-27 11:10:53 - GetAndroid:64 -
+ Configured Android options for device 'HossamDevice9AProFold'.
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [setupAndroidOptions] 2025-09-27 11:10:53 - GetAndroid:64 -
+ Configured Android options for device 'HossamDeviceTabletPixel'.
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [setupAndroidOptions] 2025-09-27 11:10:53 - GetAndroid:64 -
+ Configured Android options for device 'HossamDevice9ProXL'.
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [getInstance] 2025-09-27 11:11:24 - GetMobileDriver:74 -
+ Initialized 'android' driver successfully.
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:24 - UIActions:59 -
+ Initializing UIActions object.
+INFO [TestNG-test-All Scenarios-2] [setup_TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:24 - UIActions:69 -
+ UIActions initialized with wait duration: '20' seconds
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [TC2_userCanNavigateToCartPageAfterAddingProducts] 2025-09-27 11:11:25 - PositiveTestCases:57 -
+ ************ Starting method: 'TC2_userCanNavigateToCartPageAfterAddingProducts' ************
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:25 - AndroidActions:32 -
+ Initializing AndroidActions object.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:25 - HomePage:18 -
+ Initializing HomePage object.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getKeyAndValueByKey] 2025-09-27 11:11:25 - JsonFileManager:143 -
+ Map retrieved for key 'TC2_userCanNavigateToCartPageAfterAddingProducts': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Argentina, name=Second Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:28 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:28 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:30 - UIActions:222 -
+ Successfully found element located by [className: 'android.widget.ListView'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [isElementDisplayed] 2025-09-27 11:11:33 - UIActions:368 -
+ WebElement '-android uiautomator: new UiSelector().text("Argentina")' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [scrollUntilElementVisible] 2025-09-27 11:11:33 - AndroidActions:170 -
+ Scrolled to element '-android uiautomator: new UiSelector().text("Argentina")'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:33 - UIActions:222 -
+ Successfully found element located by [androidUIAutomator: 'new UiSelector().text("Argentina")'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [getInstance] 2025-09-27 11:11:34 - GetMobileDriver:74 -
+ Initialized 'android' driver successfully.
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [<init>] 2025-09-27 11:11:34 - UIActions:59 -
+ Initializing UIActions object.
+INFO [TestNG-test-All Scenarios-1] [setup_TC1_userCanLoginByFillingForm] [<init>] 2025-09-27 11:11:34 - UIActions:69 -
+ UIActions initialized with wait duration: '20' seconds
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [TC1_userCanLoginByFillingForm] 2025-09-27 11:11:34 - PositiveTestCases:38 -
+ ************ Starting method: 'TC1_userCanLoginByFillingForm' ************
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [<init>] 2025-09-27 11:11:34 - AndroidActions:32 -
+ Initializing AndroidActions object.
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [<init>] 2025-09-27 11:11:34 - HomePage:18 -
+ Initializing HomePage object.
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [getKeyAndValueByKey] 2025-09-27 11:11:34 - JsonFileManager:143 -
+ Map retrieved for key 'TC1_userCanLoginByFillingForm': {_description=Ensures that a user can enters product page after filling the form data and clicking shop button., country=Egypt, name=First Testing Customer, gender=Male}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:34 - UIActions:291 -
+ Clicked on element located by [androidUIAutomator: 'new UiSelector().text("Argentina")'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getKeyAndValueByKey] 2025-09-27 11:11:34 - JsonFileManager:143 -
+ Map retrieved for key 'TC2_userCanNavigateToCartPageAfterAddingProducts': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Argentina, name=Second Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:34 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/nameField'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [sendKeys] 2025-09-27 11:11:35 - UIActions:323 -
+ Sent text 'Second Testing Customer' to element located by [id: 'com.androidsample.generalstore:id/nameField'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getKeyAndValueByKey] 2025-09-27 11:11:35 - JsonFileManager:143 -
+ Map retrieved for key 'TC2_userCanNavigateToCartPageAfterAddingProducts': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Argentina, name=Second Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star]}
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [getInstance] 2025-09-27 11:11:35 - GetMobileDriver:74 -
+ Initialized 'android' driver successfully.
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:35 - UIActions:59 -
+ Initializing UIActions object.
+INFO [TestNG-test-All Scenarios-3] [setup_TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:35 - UIActions:69 -
+ UIActions initialized with wait duration: '20' seconds
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [TC3_userFindSelectedProductsAtCart] 2025-09-27 11:11:35 - PositiveTestCases:84 -
+ ************ Starting method: 'TC3_userFindSelectedProductsAtCart' ************
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:35 - AndroidActions:32 -
+ Initializing AndroidActions object.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:35 - HomePage:18 -
+ Initializing HomePage object.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getKeyAndValueByKey] 2025-09-27 11:11:35 - JsonFileManager:143 -
+ Map retrieved for key 'TC3_userFindSelectedProductsAtCart': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Algeria, name=Third Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star, Air Jordan 9 Retro, Jordan 6 Rings, Jordan Lift Off, LeBron Soldier 12, PG 3, Nike SFB Jungle]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:36 - UIActions:222 -
+ Successfully found element located by [androidUIAutomator: 'new UiSelector().resourceId("com.androidsample.generalstore:id/radioFemale")'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:36 - UIActions:291 -
+ Clicked on element located by [androidUIAutomator: 'new UiSelector().resourceId("com.androidsample.generalstore:id/radioFemale")'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:37 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/btnLetsShop'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:37 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/btnLetsShop'].
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [findWebElement] 2025-09-27 11:11:38 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:39 - AndroidActions:32 -
+ Initializing AndroidActions object.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [<init>] 2025-09-27 11:11:39 - ProductPage:23 -
+ Initializing ProductPage object.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getKeyAndValueByKey] 2025-09-27 11:11:39 - JsonFileManager:143 -
+ Map retrieved for key 'TC2_userCanNavigateToCartPageAfterAddingProducts': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Argentina, name=Second Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star]}
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [click] 2025-09-27 11:11:39 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'].
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:40 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:41 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/spinnerCountry'].
+INFO [TestNG-test-All Scenarios-1] [TC1_userCanLoginByFillingForm] [findWebElement] 2025-09-27 11:11:41 - UIActions:222 -
+ Successfully found element located by [className: 'android.widget.ListView'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:41 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.support.v7.widget.RecyclerView[@resource-id="com.androidsample.generalstore:id/rvProductList"]'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [isElementDisplayed] 2025-09-27 11:11:42 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 4 Retro")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [scrollUntilElementVisible] 2025-09-27 11:11:42 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 4 Retro")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:42 - UIActions:222 -
+ Successfully found element located by [className: 'android.widget.ListView'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [isElementDisplayed] 2025-09-27 11:11:42 - UIActions:368 -
+ WebElement '-android uiautomator: new UiSelector().text("Algeria")' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [scrollUntilElementVisible] 2025-09-27 11:11:42 - AndroidActions:170 -
+ Scrolled to element '-android uiautomator: new UiSelector().text("Algeria")'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:42 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:42 - UIActions:222 -
+ Successfully found element located by [androidUIAutomator: 'new UiSelector().text("Algeria")'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:43 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:43 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getElementText] 2025-09-27 11:11:43 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$160.97'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [isElementDisplayed] 2025-09-27 11:11:43 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [scrollUntilElementVisible] 2025-09-27 11:11:43 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:43 - UIActions:291 -
+ Clicked on element located by [androidUIAutomator: 'new UiSelector().text("Algeria")'].
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getKeyAndValueByKey] 2025-09-27 11:11:43 - JsonFileManager:143 -
+ Map retrieved for key 'TC3_userFindSelectedProductsAtCart': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Algeria, name=Third Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star, Air Jordan 9 Retro, Jordan 6 Rings, Jordan Lift Off, LeBron Soldier 12, PG 3, Nike SFB Jungle]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:43 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:43 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/nameField'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:44 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:44 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [sendKeys] 2025-09-27 11:11:44 - UIActions:323 -
+ Sent text 'Third Testing Customer' to element located by [id: 'com.androidsample.generalstore:id/nameField'].
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getKeyAndValueByKey] 2025-09-27 11:11:44 - JsonFileManager:143 -
+ Map retrieved for key 'TC3_userFindSelectedProductsAtCart': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Algeria, name=Third Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star, Air Jordan 9 Retro, Jordan 6 Rings, Jordan Lift Off, LeBron Soldier 12, PG 3, Nike SFB Jungle]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getElementText] 2025-09-27 11:11:44 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$120.0'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:45 - UIActions:222 -
+ Successfully found element located by [androidUIAutomator: 'new UiSelector().resourceId("com.androidsample.generalstore:id/radioFemale")'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:45 - UIActions:291 -
+ Clicked on element located by [androidUIAutomator: 'new UiSelector().resourceId("com.androidsample.generalstore:id/radioFemale")'].
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:46 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/btnLetsShop'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:46 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/btnLetsShop'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [isElementDisplayed] 2025-09-27 11:11:47 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Nike Blazer Mid '77")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [scrollUntilElementVisible] 2025-09-27 11:11:47 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Nike Blazer Mid '77")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:47 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Nike Blazer Mid '77")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:48 - AndroidActions:32 -
+ Initializing AndroidActions object.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [<init>] 2025-09-27 11:11:48 - ProductPage:23 -
+ Initializing ProductPage object.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getKeyAndValueByKey] 2025-09-27 11:11:48 - JsonFileManager:143 -
+ Map retrieved for key 'TC3_userFindSelectedProductsAtCart': {_description=Ensure that a user can select a product or more and click on the cart button to navigate to the cart page., country=Algeria, name=Third Testing Customer, gender=Female, products=[Air Jordan 4 Retro, Air Jordan 1 Mid SE, Nike Blazer Mid '77, Converse All Star, Air Jordan 9 Retro, Jordan 6 Rings, Jordan Lift Off, LeBron Soldier 12, PG 3, Nike SFB Jungle]}
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:48 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Nike Blazer Mid '77")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:48 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Nike Blazer Mid '77")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getElementText] 2025-09-27 11:11:48 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Nike Blazer Mid '77")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$110.0'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:50 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.support.v7.widget.RecyclerView[@resource-id="com.androidsample.generalstore:id/rvProductList"]'] with wait condition 'visibilityOfElement'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [isElementDisplayed] 2025-09-27 11:11:50 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 4 Retro")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [scrollUntilElementVisible] 2025-09-27 11:11:50 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 4 Retro")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:50 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:51 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [isElementDisplayed] 2025-09-27 11:11:51 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Converse All Star")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [scrollUntilElementVisible] 2025-09-27 11:11:51 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Converse All Star")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:51 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getElementText] 2025-09-27 11:11:51 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 4 Retro")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$160.97'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:51 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Converse All Star")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [isElementDisplayed] 2025-09-27 11:11:51 - UIActions:368 -
+ WebElement 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]' is displayed: 'true'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [scrollUntilElementVisible] 2025-09-27 11:11:51 - AndroidActions:170 -
+ Scrolled to element 'xpath: //android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']]'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:51 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:51 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Converse All Star")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:52 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Converse All Star")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getElementText] 2025-09-27 11:11:52 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Converse All Star")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$55.0'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:52 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/appbar_btn_cart'] with wait condition 'elementToBeClickable'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [click] 2025-09-27 11:11:52 - UIActions:291 -
+ Clicked on element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[@text='ADD TO CART']'].
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [click] 2025-09-27 11:11:52 - UIActions:291 -
+ Clicked on element located by [id: 'com.androidsample.generalstore:id/appbar_btn_cart'].
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [findWebElement] 2025-09-27 11:11:52 - UIActions:222 -
+ Successfully found element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [getElementText] 2025-09-27 11:11:52 - UIActions:341 -
+ Retrieved text from element located by [xPath: '//android.widget.TextView[contains(@text,"Air Jordan 1 Mid SE")]/ancestor::android.widget.LinearLayout[1]//android.widget.TextView[contains(@text,'$')]']: '$120.0'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [findWebElement] 2025-09-27 11:11:54 - UIActions:222 -
+ Successfully found element located by [id: 'com.androidsample.generalstore:id/toolbar_title'] with wait condition 'presenceOfElement'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [getElementAttribute] 2025-09-27 11:11:54 - UIActions:413 -
+ Retrieved attribute 'text' from element located by [id: 'com.androidsample.generalstore:id/toolbar_title'] is 'Cart'.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [assertCartPageOpened] 2025-09-27 11:11:54 - ProductPage:100 -
+ 
+Assertion Passed, Cart page is shown as expected.
+
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [takeScreenShot] 2025-09-27 11:11:54 - Screenshot:120 -
+ Test case 'TC2_userCanNavigateToCartPageAfterAddingProducts' passed. No screenshot will be captured.
+INFO [TestNG-test-All Scenarios-2] [TC2_userCanNavigateToCartPageAfterAddingProducts] [attachLogsToAllure] 2025-09-27 11:11:54 - AllureLog4jListener:95 -
+ Logs attached to the allure report 'Application Logs' & 'WarnError Logs'.

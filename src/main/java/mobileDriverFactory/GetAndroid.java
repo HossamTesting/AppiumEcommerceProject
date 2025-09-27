@@ -36,6 +36,7 @@ import static java.lang.invoke.MethodHandles.lookup;
  */
 class GetAndroid {
 
+
     private static final Logger log = LogManager.getLogger(lookup().lookupClass());
 
     /**
@@ -53,11 +54,14 @@ class GetAndroid {
         UiAutomator2Options options = new UiAutomator2Options()
                 .setChromedriverExecutable(config.get("chromeExePath"))
                 .setDeviceName(config.get("deviceName"))
+                .setUdid(config.get("uuid"))
                 .setApp(config.get("appLocation"))
-                .setAutomationName("UiAutomator2");
+                .setAutomationName("UiAutomator2")
+                .setPlatformName("android");
+                options.setSystemPort(Integer.parseInt(config.get("systemPort")));
 
         // options.setCapability("browserName", "Chrome");
-        log.info("Configured Android options for device '{}'", config.get("deviceName"));
+        log.info("Configured Android options for device '{}'.", config.get("deviceName"));
         return options;
     }
 }

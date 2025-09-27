@@ -371,6 +371,65 @@ public class JsonFileManager {
         }
         return false;
     }
+    /**
+     * Retrieves a list of maps associated with the specified key.
+     *
+     * @param key  the key in JSON pointing to a list of objects/maps.
+     * @param flag optional flag:
+     *             <ul>
+     *               <li>If true, throws an exception if the key is not found or value is not a list of maps.</li>
+     *               <li>If false or not provided, logs a warning and returns null.</li>
+     *             </ul>
+     * @return a list of maps (List Map<<(String,Object)>>) or null if not found/invalid.
+     * @throws IllegalArgumentException if key is null/empty or not found and flag is true.
+     * @throws ClassCastException       if the value is not a list of maps.
+     */
+    public List<Map<String, Object>> getListOfMapsByKey(String key, boolean... flag) {
+        boolean flagValue = flag.length > 0 && flag[0];
+
+        if (key == null || key.isEmpty()) {
+            if (flagValue) {
+                log.error("The provided key is null or empty.");
+                throw new IllegalArgumentException("The provided key: '" + key + "' is null or empty.");
+            }
+            log.warn("The provided key is null or empty.");
+            return null;
+        }
+
+        boolean checkNullData = checkNullData(flagValue);
+        if (!checkNullData) {
+            if (!data.containsKey(key)) {
+                if (flagValue) {
+                    log.error("Key '{}' not found in JSON data.", key);
+                    throw new IllegalArgumentException("Key '" + key + "' not found in JSON data.");
+                }
+                log.warn("Key '{}' not found in JSON data.", key);
+                return null;
+            }
+
+            try {
+                List<?> rawList = (List<?>) data.get(key);
+                List<Map<String, Object>> result = new ArrayList<>();
+
+                for (Object obj : rawList) {
+                    if (obj instanceof Map) {
+                        result.add((Map<String, Object>) obj);
+                    } else {
+                        throw new ClassCastException("Expected a map but found: " + obj.getClass());
+                    }
+                }
+
+                log.info("List of maps retrieved for key '{}': {}", key, result);
+                return result;
+
+            } catch (ClassCastException e) {
+                log.error("Value under key '{}' is not a list of maps.", key);
+                throw new ClassCastException("Value under key '" + key + "' is not a list of maps.");
+            }
+        }
+
+        return null;
+    }
 
 
 }
