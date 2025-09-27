@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.net.MalformedURLException;
 import java.net.URI;
-import java.time.Duration;
 import java.util.Map;
 
 import static java.lang.invoke.MethodHandles.lookup;
@@ -54,7 +53,7 @@ public class GetMobileDriver {
      * @param platform        the mobile platform ("android" or "ios"), case-insensitive
      * @param appiumServerUri the URI of the Appium server (e.g., http://127.0.0.1:4723/")
      * @param config          map of configuration values (capabilities such as deviceName, platformVersion, etc.)
-     * @throws MalformedURLException if the Appium server URI is invalid
+     * @throws MalformedURLException    if the Appium server URI is invalid
      * @throws IllegalArgumentException if the platform is not supported
      */
     public static void getInstance(String platform, URI appiumServerUri, Map<String, String> config) throws MalformedURLException {
@@ -65,7 +64,8 @@ public class GetMobileDriver {
 
         AppiumDriver driver;
         switch (platform.toLowerCase()) {
-            case "android" -> driver = new AndroidDriver(appiumServerUri.toURL(), GetAndroid.setupAndroidOptions(config));
+            case "android" ->
+                    driver = new AndroidDriver(appiumServerUri.toURL(), GetAndroid.setupAndroidOptions(config));
             case "ios" -> driver = new IOSDriver(appiumServerUri.toURL(), GetIOS.setupIOSOptions(config));
             default -> throw new IllegalArgumentException("Unsupported platform: " + platform);
         }

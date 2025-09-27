@@ -1,0 +1,2 @@
+WARN [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [assertItemsAddedShownInCart] 2025-09-27 11:12:25 CartPage:86 -
+ The sent productName 'LeBron Soldier 12' isn't exactly as the product existing name 'LeBron Soldier 12 '.

@@ -1,6 +1,5 @@
 package pages;
 
-import actions.BrowserActions;
 import actions.UIActions;
 import mobile.android.AndroidActions;
 import org.apache.logging.log4j.LogManager;
@@ -76,7 +75,6 @@ public class ProductPage extends BasePage {
     }
 
 
-
     //***************************************************Assertions***************************************************//
 
     public void assertErrorMessageShown() {
@@ -106,12 +104,11 @@ public class ProductPage extends BasePage {
         }
     }
 
-    public void assertCartCounterShowsAddedProductsCounter(String itemsSize, SoftAssert softAssert){
+    public void assertCartCounterShowsAddedProductsCounter(String itemsSize, SoftAssert softAssert) {
         if (getCartCounter().equals(itemsSize)) {
             softAssert.assertEquals(getCartCounter(), itemsSize);
-        }
-        else {
-            log.error("Assertion Failed, Cart counter '{}' isn't the same as selected items size '{}'.",getCartCounter(),itemsSize);
+        } else {
+            log.error("Assertion Failed, Cart counter '{}' isn't the same as selected items size '{}'.", getCartCounter(), itemsSize);
             throw new RuntimeException("Assertion Failed, Cart counter isn't the same as selected items size.");
         }
     }

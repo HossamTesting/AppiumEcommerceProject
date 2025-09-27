@@ -1,0 +1,6 @@
+WARN [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [assertItemsAddedShownInCart] 2025-09-27 11:12:25 CartPage:86 -
+ The sent productName 'LeBron Soldier 12' isn't exactly as the product existing name 'LeBron Soldier 12 '.
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeScreenShot] 2025-09-27 11:13:12 Screenshot:109 -
+ Test case 'TC6_userCanLoggingWhenNavigateToWebsite' failed. Taking screenshot...
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeShot] 2025-09-27 11:13:14 Screenshot:89 -
+ Screenshot captured and saved as: TC6_userCanLoggingWhenNavigateToWebsite_2025-09-27_11-13-12.png

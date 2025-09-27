@@ -22,11 +22,33 @@ public class NegativeTestCases extends BaseTest{
     private static final Logger log = LogManager.getLogger(lookup().lookupClass());
 
 
-    @Description("This testcase aim is to ensure that a user can't navigate to product page without filling form.")
+
+    @Description("This testcase aim is to ensure that a user can't navigate to cart page without adding products.")
     @Feature("NegativeScenarios")
     @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 7)
-    public void TC7_userCannotNavigateToLoginWithoutFillingForm() throws Exception {
+    public void TC7_userCannotNavigateToCartPageWithoutAddingProducts() throws Exception {
+        ThreadContext.put("TestName", methodName.get());
+        log.info("************ Starting method: '{}' ************", methodName.get());
+
+        homePage.set(new HomePage(uiActions.get()));
+        homePage.get().selectCountry(jsonFileManager.getKeyAndValueByKey("TC7_userCannotNavigateToCartPageWithoutAddingProducts").get("country").toString());
+        homePage.get().enterName(jsonFileManager.getKeyAndValueByKey("TC7_userCannotNavigateToCartPageWithoutAddingProducts").get("name").toString());
+        String gender = jsonFileManager.getKeyAndValueByKey("TC7_userCannotNavigateToCartPageWithoutAddingProducts").get("gender").toString().toLowerCase();
+        homePage.get().selectGender(HomePage.Gender.valueOf(gender));
+        homePage.get().clickShopBtn();
+        productPage.set(new ProductPage(uiActions.get()));
+        productPage.get().clickOnCartBtn();
+        productPage.get().assertErrorMessageShown();
+
+    }
+
+
+    @Description("This testcase aim is to ensure that a user can't navigate to product page without filling form.")
+    @Feature("NegativeScenarios")
+    @Severity(SeverityLevel.CRITICAL)
+    @Test(priority = 8)
+    public void TC8_userCannotNavigateToLoginWithoutFillingForm() throws Exception {
         ThreadContext.put("TestName", methodName.get());
         log.info("************ Starting method: '{}' ************", methodName.get());
         homePage.set(new HomePage(uiActions.get()));
@@ -35,25 +57,7 @@ public class NegativeTestCases extends BaseTest{
 
     }
 
-    @Description("This testcase aim is to ensure that a user can't navigate to cart page without adding products.")
-    @Feature("NegativeScenarios")
-    @Severity(SeverityLevel.CRITICAL)
-    @Test(priority = 8)
-    public void TC8_userCannotNavigateToCartPageWithoutAddingProducts() throws Exception {
-        ThreadContext.put("TestName", methodName.get());
-        log.info("************ Starting method: '{}' ************", methodName.get());
 
-        homePage.set(new HomePage(uiActions.get()));
-        homePage.get().selectCountry(jsonFileManager.get().getKeyAndValueByKey("TC8_userCannotNavigateToCartPageWithoutAddingProducts").get("country").toString());
-        homePage.get().enterName(jsonFileManager.get().getKeyAndValueByKey("TC8_userCannotNavigateToCartPageWithoutAddingProducts").get("name").toString());
-        String gender = jsonFileManager.get().getKeyAndValueByKey("TC8_userCannotNavigateToCartPageWithoutAddingProducts").get("gender").toString().toLowerCase();
-        homePage.get().selectGender(HomePage.Gender.valueOf(gender));
-        homePage.get().clickShopBtn();
-        productPage.set(new ProductPage(uiActions.get()));
-        productPage.get().clickOnCartBtn();
-        productPage.get().assertErrorMessageShown();
-
-    }
 
 
 }

@@ -3,19 +3,24 @@ package tests;
 import actions.UIActions;
 import datadriven.ConfigLoader;
 import datadriven.JsonFileManager;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
 import mobileDriverFactory.GetMobileDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.ThreadContext;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
-import pages.*;
+import pages.CartPage;
+import pages.HomePage;
+import pages.ProductPage;
+import pages.WebPage;
+import utility.DevicesManager;
 
-import java.io.File;
 import java.lang.reflect.Method;
 import java.net.URI;
+import java.util.List;
 import java.util.Map;
 
 import static java.lang.invoke.MethodHandles.lookup;
@@ -24,18 +29,41 @@ public class BaseTest {
 
 
     private static final Logger log = LogManager.getLogger(lookup().lookupClass());
-    protected static ThreadLocal<ConfigLoader> configurationLoader = new ThreadLocal<>();
-    protected ThreadLocal<JsonFileManager> jsonFileManager = new ThreadLocal<>();
+    private static ConfigLoader configurationLoader;
+    private static DevicesManager deviceManager;
+    private static boolean deviceInitialized = false;
+
+    protected static JsonFileManager jsonFileManager;
     protected ThreadLocal<String> methodName = new ThreadLocal<>();
     protected ThreadLocal<SoftAssert> softAssert = new ThreadLocal<>();
     protected ThreadLocal<HomePage> homePage = new ThreadLocal<>();
     protected ThreadLocal<ProductPage> productPage = new ThreadLocal<>();
     protected ThreadLocal<CartPage> cartPage = new ThreadLocal<>();
     protected ThreadLocal<WebPage> webPage = new ThreadLocal<>();
-    protected ThreadLocal<String> acquiredUserId = new ThreadLocal<>();
     protected ThreadLocal<UIActions> uiActions = new ThreadLocal<>();
+    protected ThreadLocal<Map<String, Object>> acquiredDevice = new ThreadLocal<>();
 
-    private AppiumDriverLocalService driverLocalService;
+
+    @BeforeSuite
+    public void startAppiumServices() throws Exception {
+
+        ThreadContext.put("TestName", "startAppiumServices");
+        log.info("************ Starting method: startAppiumServices ************");
+        org.apache.logging.log4j.jul.LogManager.getLogManager().reset();
+        configurationLoader = new ConfigLoader("src/test/resources/Config.properties");
+        jsonFileManager = new JsonFileManager("src/test/resources/jsonNewData.json");
+
+        if (!deviceInitialized) {                                           // Initializing devices pool
+            deviceManager = new DevicesManager();
+
+            List<Map<String, Object>> devices = jsonFileManager.getListOfMapsByKey("devices");
+            deviceManager.initialize(devices);
+
+            deviceManager.startAllServices(configurationLoader);            // Start Appium servers once for all devices
+            deviceInitialized = true;
+        }
+
+    }
 
     @BeforeMethod
     public void setup(Method method) throws Exception {
@@ -43,62 +71,59 @@ public class BaseTest {
         methodName.set(method.getName());
         log.info("************ Starting method: setup ************");
 
-        configurationLoader.set(new ConfigLoader("src/test/resources/Config.properties"));
-        jsonFileManager.set(new JsonFileManager("src/test/resources/jsonNewData.json"));
-        //Setup Appium Server
-        driverLocalService = new AppiumServiceBuilder()
-                .withAppiumJS(new File(configurationLoader.get().getValue("appiumServerPath")))
-                .withIPAddress(configurationLoader.get().getValue("appiumServerIPAddress"))
-                .usingPort(Integer.parseInt(configurationLoader.get().getValue("appiumServerPort")))
-                .build();
-        driverLocalService.start();
+        Map<String, Object> device = deviceManager.acquireDevice();
+        acquiredDevice.set(device);
 
-        URI appiumServerUri = new URI(configurationLoader.get().getValue("appiumServerURI"));
-        String platform = configurationLoader.get().getValue("platform");
+        URI appiumServerUri = new URI("http://" + configurationLoader.getValue("appiumServerIPAddress")
+                + ":" +((Double) acquiredDevice.get().get("serverPort")).intValue());
+        String platform = configurationLoader.getValue("platform");
         Map<String, String> mobileConfig = Map.of(
                 "platform", platform,
-                "deviceName", configurationLoader.get().getValue("deviceName"),
-                "appLocation", configurationLoader.get().getValue("appLocation"),
-                "chromeExePath",configurationLoader.get().getValue("chromeExePath")
-        );
+                "deviceName", acquiredDevice.get().get("deviceName").toString(),
+                "appLocation", configurationLoader.getValue("appLocation"),
+                "chromeExePath", configurationLoader.getValue("chromeExePath"),
+                "uuid", acquiredDevice.get().get("uuid").toString(),
+                "systemPort", Integer.toString(((Double) acquiredDevice.get().get("systemPort")).intValue()));
 
-        GetMobileDriver.getInstance(platform,
+
+        GetMobileDriver.getInstance(platform,                                  // Getting MobileDriver instance
                 appiumServerUri,
                 mobileConfig
-                );
-
+        );
         uiActions.set(new UIActions(20, UIActions.platform.mobile));
         softAssert.set(new SoftAssert());
     }
 
-    @BeforeSuite
-    public void restingJULBridge() {
-
-        ThreadContext.put("TestName", "restingJULBridge");
-        log.info("************ Starting method: restingJULBridge ************");
-        org.apache.logging.log4j.jul.LogManager.getLogManager().reset();
-
-
-    }
-
 
     @AfterMethod
-    public void quitDriver() throws InterruptedException {
+    public void quitDriver() {
         ThreadContext.put("TestName", "quitDriver_" + methodName.get());
         log.info("************ Starting method: 'quitDriver' ************");
-        Thread.sleep(5000);
         GetMobileDriver.quitDriver();
+
+
+        Map<String, Object> device = acquiredDevice.get();                    // Release device back to pool
+        if (device != null) {
+            deviceManager.releaseDevice(device);
+            log.info("Device '{}' is released back to pool.", device.get("deviceName"));
+        }
         clearThreadLocals();
     }
+
+    @AfterSuite
+    public void stopAppiumServices() {
+        ThreadContext.put("TestName", "stopAppiumServices");
+        log.info("************ Starting method: stopAppiumServices ************");
+        deviceManager.stopAllServices();
+    }
+
 
     private void clearThreadLocals() {
         softAssert.remove();
         methodName.remove();
-        configurationLoader.remove();
-        jsonFileManager.remove();
         homePage.remove();
         productPage.remove();
-        acquiredUserId.remove();
+        acquiredDevice.remove();
         homePage.remove();
         productPage.remove();
         cartPage.remove();

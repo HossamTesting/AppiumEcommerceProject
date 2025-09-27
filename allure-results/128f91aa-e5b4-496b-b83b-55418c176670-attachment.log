@@ -1,0 +1,14 @@
+WARN [TestNG-test-All Scenarios-3] [TC3_userFindSelectedProductsAtCart] [assertItemsAddedShownInCart] 2025-09-27 11:12:25 CartPage:86 -
+ The sent productName 'LeBron Soldier 12' isn't exactly as the product existing name 'LeBron Soldier 12 '.
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeScreenShot] 2025-09-27 11:13:12 Screenshot:109 -
+ Test case 'TC6_userCanLoggingWhenNavigateToWebsite' failed. Taking screenshot...
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeShot] 2025-09-27 11:13:14 Screenshot:89 -
+ Screenshot captured and saved as: TC6_userCanLoggingWhenNavigateToWebsite_2025-09-27_11-13-12.png
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [quitDriver] 2025-09-27 11:13:15 GetWebDriver:176 -
+ Driver instance isn't initiated yet! Please get an instance first Or Driver is already quit.
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [retry] 2025-09-27 11:13:15 RetryAnalyzer:89 -
+ Retrying test 'TC6_userCanLoggingWhenNavigateToWebsite' - attempt 1/1
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeScreenShot] 2025-09-27 11:14:03 Screenshot:109 -
+ Test case 'TC6_userCanLoggingWhenNavigateToWebsite' failed. Taking screenshot...
+WARN [TestNG-test-All Scenarios-3] [TC6_userCanLoggingWhenNavigateToWebsite] [takeShot] 2025-09-27 11:14:04 Screenshot:89 -
+ Screenshot captured and saved as: TC6_userCanLoggingWhenNavigateToWebsite_2025-09-27_11-14-03.png
